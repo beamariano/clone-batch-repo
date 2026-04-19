@@ -1,6 +1,6 @@
 # Batch Repository Cloner
 
-A CLI tool that batch-clones student repositories from a GitLab group, filtering to only the specified repo names (e.g. Homeworks, Projects).
+A CLI tool that batch-clones student repositories from a GitLab group, filtering to only the specified sub-repository/folder names (e.g. Homeworks, Projects).
 
 ## Prerequisites
 
@@ -10,8 +10,8 @@ A CLI tool that batch-clones student repositories from a GitLab group, filtering
 
 **GitLab:**
 * GitLab account with access to the target group
-* Personal access token with `read_api` scope
-* GitLab group path (e.g. `my-org/batch-01`)
+* Personal access token. To create your own PAT, see: https://docs.gitlab.com/user/profile/personal_access_tokens/
+* GitLab group ID. See: https://docs.gitlab.com/user/group/#find-the-group-id
 
 ## Configuration
 
@@ -24,8 +24,8 @@ cp .env .env.local
 | Variable | Required | Description |
 |---|---|---|
 | `GITLAB_TOKEN` | Yes | GitLab personal access token with `read_api` scope |
-| `GITLAB_GROUP` | Yes | Full path of the GitLab group to clone from (e.g. `my-org/batch-01`) |
-| `FOLDERS_TO_CLONE` | No | Comma-separated repo names to include (default: `Homeworks,Projects`) |
+| `GITLAB_GROUP` | Yes | The group ID of the repository (e.g. `123456789`) |
+| `FOLDERS_TO_CLONE` | No | Comma-separated repository/folder names to include (default: `Homeworks,Projects`) |
 
 ## Installation
 
