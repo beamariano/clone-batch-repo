@@ -11,7 +11,7 @@ A CLI tool that batch-clones student repositories from a GitLab group, filtering
 **GitLab:**
 * GitLab account with access to the target group
 * Personal access token with `read_api` scope
-* GitLab group path (e.g. `my-org/batch-28`)
+* GitLab group path (e.g. `my-org/batch-01`)
 
 ## Configuration
 
@@ -24,7 +24,7 @@ cp .env .env.local
 | Variable | Required | Description |
 |---|---|---|
 | `GITLAB_TOKEN` | Yes | GitLab personal access token with `read_api` scope |
-| `GITLAB_GROUP` | Yes | Full path of the GitLab group to clone from (e.g. `my-org/batch-28`) |
+| `GITLAB_GROUP` | Yes | Full path of the GitLab group to clone from (e.g. `my-org/batch-01`) |
 | `FOLDERS_TO_CLONE` | No | Comma-separated repo names to include (default: `Homeworks,Projects`) |
 
 ## Installation
@@ -39,4 +39,4 @@ pip install -r requirements.txt
 python clone_repos.py
 ```
 
-Cloned repositories are saved to `./batch-28-students/<student-name>/<repo-name>/`. The output directory name is currently hardcoded in the script.
+Cloned repositories are saved to `./batch-01-students/<student-name>/<repo-name>/`. The output directory name is currently hardcoded in the script.
